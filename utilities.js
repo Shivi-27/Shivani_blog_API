@@ -1,5 +1,5 @@
 module.exports = {
     constants: {
-        jwtSecreat: "mynameisjikeshkumarbackenddeveloper"
+        jwtSecreat: "shivani"
     }
 }
