@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "e3efdf3a-ff02-46ce-89d6-9ab86f2667d5",
+		"name": "blogs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"j@y.c\",\r\n    \"name\":\"a\",\r\n    \"password\":\"12345\",\r\n    \"phone\":\"1234567892\",\r\n    \"userType\":\"AUTHER\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/auth/register",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"j@y.c\",\r\n    \"password\":\"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": " add posts",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTIzYzUyNmVhM2M2NjM2OTBhODA0MmUiLCJ1c2VyVHlwZSI6IkFVVEhFUiIsImlhdCI6MTYyOTczNDE5NX0.BTOU4YGSv2noRLixgWqLq7GuzAOg2fTNE3U1WSTI41g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"post2\",\r\n    \"article\":\"post two content , sdfghjk asdfghj asdfghj sdfghj dfghj\",\r\n    \"category\":\"POST2\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/posts",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get posts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTIzYzE4ZjdiOTVhODRjMDg0ZjZhMDYiLCJ1c2VyVHlwZSI6IlVTRVIiLCJpYXQiOjE2Mjk3MzQzNjV9.WKHyJNf8HZ55c5cITjyMXYGTj8_nQt3zojPclv1094Q",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:5000/api/posts?category=",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"posts"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
