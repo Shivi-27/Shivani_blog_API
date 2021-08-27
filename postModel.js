@@ -3,19 +3,19 @@ var Schema = mongoose.Schema;
 
 
 const  postSchema= new mongoose.Schema({
-    userId:{
-        type: Schema.Types.ObjectId,
+    name:{
+        type: Schema, 
         ref: "users",
   
     },
-    title:{
+    Phone:{
+        type:number,
+    },
+    email:{
         type:String,
     },
-    article:{
-        type:String,
-    },
-    categoryId:{
-        type: Schema.Types.ObjectId,
+    Password:{
+        type: String, 
         ref: "caegories",
     }
 },{timestamps:true});
